@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>choose any one of there</h1>
+    <button onclick="
+    
+    computer()
+
+    results('tie','lose','won')
+    alerts()
+    
+
+    cal()
+    "
+     >Rock</button>
+
+
+
+
+     <button onclick=" 
+    computer()
+
+    results('won','tie','lose')
+
+    alerts()
+
+    cal()
+
+    
+    ">paper</button> 
+
+
+
+
+     <button onclick="computer()
+
+    results('lose','won','tie')
+    
+    
+    alerts()
+
+    cal()
+
+    ">scissors</button> 
+
+
+
+
+
+    <p>you can see score in console</p>
+
+
+
+    <script>
+
+      let computerMove = '';
+      let result='';
+
+        function computer(){
+      randomNumber = Math.random()
+
+
+      if(randomNumber>0 && randomNumber<1/3){
+        computerMove='rock'
+      }
+      else if(randomNumber>1/3 && randomNumber<2/3){
+        computerMove='paper'
+      } 
+      else if(randomNumber>2/3 && randomNumber<1){
+        computerMove='scissors'
+      } 
+      console.log('computer chose '+ computerMove)
+      
+        }
+
+        
+
+        function results(a,b,c){
+          
+           
+        
+
+        if(computerMove== 'rock'){
+          
+        result = a
+        }
+        else if(computerMove=='paper'){
+            result = b
+          
+        }
+        else if(computerMove=='scissors')
+        {
+            result=c
+        }
+
+        console.log(result)
+
+
+
+        }
+
+        
+
+        function alerts(){
+
+        
+        alert('computer chose ' + computerMove +'.'+ 'you'+ result)
+
+        }
+
+
+        scores={
+          won:0,
+          lose:0,
+          tie:0
+
+  
+}
+
+function cal(){
+  if(result=='won'){
+    scores.won=scores.won+1
+    console.log(scores)
+  }
+
+  if(result=='lose'){
+    scores.lose=scores.lose+1
+    console.log(scores)
+  }
+
+  if(result=='tie'){
+    scores.tie=scores.tie+1
+
+    console.log(scores)
+  }
+ 
+}
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
